@@ -1,4 +1,4 @@
-package pl.edu.pjatk.tau.productManager;
+package pl.edu.pjatk.tau.domain;
 
 /**
  * Hello world!
