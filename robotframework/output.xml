@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200111 03:24:18.475" rpa="false">
+<suite id="s1" name="Figure Script Test" source="C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure_script_test.robot">
+<test id="s1-t1" name="No arguments">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>/</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:18.584" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py / 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:19.037" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:19.037" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:18.569" endtime="20200111 03:24:19.037"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:19.037" endtime="20200111 03:24:19.037"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:18.569" endtime="20200111 03:24:19.037"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:18.569" endtime="20200111 03:24:19.037" critical="yes"></status>
+</test>
+<test id="s1-t2" name="One argument">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:19.053" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:19.490" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:19.490" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:19.053" endtime="20200111 03:24:19.490"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:19.490" endtime="20200111 03:24:19.490"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:19.037" endtime="20200111 03:24:19.490"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:19.037" endtime="20200111 03:24:19.490" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Two arguments">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 2</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:19.506" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 2 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:19.944" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:19.944" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:19.490" endtime="20200111 03:24:19.944"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:19.944" endtime="20200111 03:24:19.944"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:19.490" endtime="20200111 03:24:19.944"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:19.490" endtime="20200111 03:24:19.959" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Five arguments">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 2 3 4 5</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:19.959" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 2 3 4 5 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:20.397" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:20.397" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:19.959" endtime="20200111 03:24:20.412"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:20.412" endtime="20200111 03:24:20.412"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:19.959" endtime="20200111 03:24:20.412"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:19.959" endtime="20200111 03:24:20.412" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Underscores">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>_ __ ___ ____</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:20.412" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py _ __ ___ ____ 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:20.865" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:20.865" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:20.412" endtime="20200111 03:24:20.865"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:20.865" endtime="20200111 03:24:20.865"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:20.412" endtime="20200111 03:24:20.865"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:20.412" endtime="20200111 03:24:20.865" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Dollars">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>$ $$ $$$ $$$$</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:20.865" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py $ $$ $$$ $$$$ 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:21.319" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:21.319" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:20.865" endtime="20200111 03:24:21.319"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:21.319" endtime="20200111 03:24:21.319"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:20.865" endtime="20200111 03:24:21.319"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:20.865" endtime="20200111 03:24:21.319" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Curlies">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>\{ \} \$\{ \}\{</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:21.334" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py { } ${ }{ 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:21.813" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:21.813" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:21.319" endtime="20200111 03:24:21.813"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:21.813" endtime="20200111 03:24:21.813"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:21.319" endtime="20200111 03:24:21.813"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:21.319" endtime="20200111 03:24:21.813" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Letters">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>a A b B</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:21.829" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py a A b B 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:22.266" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:22.266" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:21.829" endtime="20200111 03:24:22.266"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:22.266" endtime="20200111 03:24:22.266"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:21.829" endtime="20200111 03:24:22.266"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:21.813" endtime="20200111 03:24:22.266" critical="yes"></status>
+</test>
+<test id="s1-t9" name="Letter and three valid arguments">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 a 1 1</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:22.282" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 a 1 1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:22.719" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:22.719" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:22.282" endtime="20200111 03:24:22.719"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:22.719" endtime="20200111 03:24:22.719"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:22.282" endtime="20200111 03:24:22.719"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:22.282" endtime="20200111 03:24:22.719" critical="yes"></status>
+</test>
+<test id="s1-t10" name="Zeros">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>0 0 0</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:22.749" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 0 0 0 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:23.216" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:23.216" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:22.743" endtime="20200111 03:24:23.216"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:23.216" endtime="20200111 03:24:23.216"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:22.742" endtime="20200111 03:24:23.216"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:22.741" endtime="20200111 03:24:23.216" critical="yes"></status>
+</test>
+<test id="s1-t11" name="Zero and three valid arguments">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 0 1 1</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:23.231" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 0 1 1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:23.669" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:23.669" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:23.231" endtime="20200111 03:24:23.669"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:23.669" endtime="20200111 03:24:23.669"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:23.231" endtime="20200111 03:24:23.669"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:23.231" endtime="20200111 03:24:23.669" critical="yes"></status>
+</test>
+<test id="s1-t12" name="Negatives">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>-1 -1 -1</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:23.684" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py -1 -1 -1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:24.122" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:24.122" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:23.669" endtime="20200111 03:24:24.122"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:24.122" endtime="20200111 03:24:24.122"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:23.669" endtime="20200111 03:24:24.122"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:23.669" endtime="20200111 03:24:24.122" critical="yes"></status>
+</test>
+<test id="s1-t13" name="Negative and three valid arguments">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 -1 1 1</arg>
+<arg>nie rozpoznano</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:24.138" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 -1 1 1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:24.575" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:24.575" level="INFO">${output} = nie rozpoznano</msg>
+<status status="PASS" starttime="20200111 03:24:24.122" endtime="20200111 03:24:24.575"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:24.575" endtime="20200111 03:24:24.575"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:24.122" endtime="20200111 03:24:24.575"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:24.122" endtime="20200111 03:24:24.591" critical="yes"></status>
+</test>
+<test id="s1-t14" name="Floats">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>4.456 4.456 4.456 4.456</arg>
+<arg>kwadrat</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:24.591" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 4.456 4.456 4.456 4.456 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:25.028" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:25.028" level="INFO">${output} = kwadrat</msg>
+<status status="PASS" starttime="20200111 03:24:24.591" endtime="20200111 03:24:25.028"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:25.028" endtime="20200111 03:24:25.028"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:24.591" endtime="20200111 03:24:25.028"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:24.591" endtime="20200111 03:24:25.044" critical="yes"></status>
+</test>
+<test id="s1-t15" name="E notation">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>4e3 4e3 4e3 4e3</arg>
+<arg>kwadrat</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:25.044" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 4e3 4e3 4e3 4e3 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:25.481" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:25.481" level="INFO">${output} = kwadrat</msg>
+<status status="PASS" starttime="20200111 03:24:25.044" endtime="20200111 03:24:25.481"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:25.481" endtime="20200111 03:24:25.481"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:25.044" endtime="20200111 03:24:25.481"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:25.044" endtime="20200111 03:24:25.481" critical="yes"></status>
+</test>
+<test id="s1-t16" name="Huge number">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>4e64 4e64 4e64 4e64</arg>
+<arg>kwadrat</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:25.497" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 4e64 4e64 4e64 4e64 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:25.934" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:25.934" level="INFO">${output} = kwadrat</msg>
+<status status="PASS" starttime="20200111 03:24:25.497" endtime="20200111 03:24:25.934"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:25.934" endtime="20200111 03:24:25.934"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:25.497" endtime="20200111 03:24:25.934"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:25.497" endtime="20200111 03:24:25.934" critical="yes"></status>
+</test>
+<test id="s1-t17" name="Equilateral triangle">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 1 1</arg>
+<arg>trojkat rownoboczny</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:25.950" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 1 1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:26.419" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:26.419" level="INFO">${output} = trojkat rownoboczny</msg>
+<status status="PASS" starttime="20200111 03:24:25.950" endtime="20200111 03:24:26.419"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:26.419" endtime="20200111 03:24:26.419"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:25.950" endtime="20200111 03:24:26.419"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:25.934" endtime="20200111 03:24:26.419" critical="yes"></status>
+</test>
+<test id="s1-t18" name="Polygonal triangle">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>2 2.5 4</arg>
+<arg>trojkat roznoboczny</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:26.434" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 2 2.5 4 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:26.888" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:26.888" level="INFO">${output} = trojkat roznoboczny</msg>
+<status status="PASS" starttime="20200111 03:24:26.419" endtime="20200111 03:24:26.888"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:26.888" endtime="20200111 03:24:26.888"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:26.419" endtime="20200111 03:24:26.888"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:26.419" endtime="20200111 03:24:26.888" critical="yes"></status>
+</test>
+<test id="s1-t19" name="Isosceles triangle">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 2 2</arg>
+<arg>trojkat rownoramienny</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:26.903" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 2 2 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:27.341" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:27.341" level="INFO">${output} = trojkat rownoramienny</msg>
+<status status="PASS" starttime="20200111 03:24:26.903" endtime="20200111 03:24:27.341"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:27.341" endtime="20200111 03:24:27.341"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:26.903" endtime="20200111 03:24:27.341"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:26.903" endtime="20200111 03:24:27.341" critical="yes"></status>
+</test>
+<test id="s1-t20" name="Square">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 1 1 1</arg>
+<arg>kwadrat</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:27.356" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 1 1 1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:27.794" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:27.794" level="INFO">${output} = kwadrat</msg>
+<status status="PASS" starttime="20200111 03:24:27.356" endtime="20200111 03:24:27.794"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:27.794" endtime="20200111 03:24:27.794"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:27.356" endtime="20200111 03:24:27.794"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:27.356" endtime="20200111 03:24:27.794" critical="yes"></status>
+</test>
+<test id="s1-t21" name="Quadrangle">
+<kw name="Run with arguments" library="resource">
+<arguments>
+<arg>1 2 2 1</arg>
+<arg>prostokat</arg>
+</arguments>
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${app} ${command}</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20200111 03:24:27.809" level="INFO">Running command 'C:\Users\wit\Workspace\PJATK\7-TAU\lab6\everlyn\figure.py 1 2 2 1 2&gt;&amp;1'.</msg>
+<msg timestamp="20200111 03:24:28.243" level="INFO">${rc} = 0</msg>
+<msg timestamp="20200111 03:24:28.243" level="INFO">${output} = prostokat</msg>
+<status status="PASS" starttime="20200111 03:24:27.794" endtime="20200111 03:24:28.243"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20200111 03:24:28.243" endtime="20200111 03:24:28.243"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:27.794" endtime="20200111 03:24:28.243"></status>
+</kw>
+<status status="PASS" starttime="20200111 03:24:27.794" endtime="20200111 03:24:28.243" critical="yes"></status>
+</test>
+<doc>Tests to determine which figures could be constructed from given side lengths.
+
+Supports: Triangles and Quadrangles.
+The test suites requires to be launched in the same directory as the program figure.py.
+Command represents the arguments passed to figure.py script.
+
+For the sake of readability phrase "passed as arguments" is ommited in the endigs of each test case name.</doc>
+<status status="PASS" starttime="20200111 03:24:18.490" endtime="20200111 03:24:28.258"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="21" fail="0">Critical Tests</stat>
+<stat pass="21" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="21" fail="0" id="s1" name="Figure Script Test">Figure Script Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
