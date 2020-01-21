@@ -1,32 +1,42 @@
 package pl.edu.pjatk.tau.SeleniumLab;
 
-import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class OrderFormTests {
     private static WebDriver driver;
     private  String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
+    private static ChromeOptions options = new ChromeOptions();
 
     @Rule
     public ScreenShotOnFailure failure = new ScreenShotOnFailure(driver);
 
     @BeforeClass
     public static void setUpBc(){
-        driver = new ChromeDriver();
+        // Solving "[SEVERE]: Timed out receiving message from renderer: 0.100" issue, thanks to:
+        //      https://stackoverflow.com/questions/48450594/selenium-timed-out-receiving-message-from-renderer/52340526
+        options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        options.addArguments("start-maximized");
+        options.addArguments("enable-automation");
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-infobars");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-browser-side-navigation");
+        options.addArguments("--disable-gpu");
+        driver = new ChromeDriver(options);
     }
 
     @Before
     public void setUp() throws Exception {
         baseUrl = "https://roberts.pl/index.php?l=en&p=_katalog&i=_neutron_plus";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.get(baseUrl);
         driver.findElement(By.name("SubmitNext")).click();
         try {
@@ -38,20 +48,9 @@ public class OrderFormTests {
     }
 
     @Test
-    public void testOrderFormSuccess() throws Exception {
+    public void successfulOrderTest() throws Exception {
 
-        driver.findElement(By.name("krok1-qty-required")).click();
-        driver.findElement(By.name("krok1-qty-required")).clear();
-        driver.findElement(By.name("krok1-qty-required")).sendKeys("2");
-        driver.findElement(By.name("krok1-info1")).click();
-        driver.findElement(By.name("krok1-info1")).clear();
-        driver.findElement(By.name("krok1-info1")).sendKeys("Example comment");
-        driver.findElement(By.cssSelector("[type='submit']")).click();
-        try {
-            assertEquals("2", driver.findElement(By.name("step")).getAttribute("value"));
-        } catch (Exception e) {
-            verificationErrors.append(e.getMessage());
-        }
+        goToStep2();
 
         driver.findElement(By.xpath("(//input[@name='krok2-sposob_dostawy-required'])[3]")).click();
         driver.findElement(By.id("datepicker")).click();
@@ -92,6 +91,17 @@ public class OrderFormTests {
         }
     }
 
+    @Test
+    public void deliveryAddressShowHideTest() throws Exception {
+        goToStep2();
+
+        assertTrue(driver.findElement(By.id("answer2")).getAttribute("style").contains("display: none"));
+        driver.findElement(By.cssSelector("[value='_formularz_zamowienia_sposob_dostawy_kurier']")).click();
+        assertTrue(driver.findElement(By.id("answer2")).getAttribute("style").contains("display: block"));
+        driver.findElement(By.cssSelector("[value='_formularz_zamowienia_sposob_dostawy_odbior_osobisty']")).click();
+        assertTrue(driver.findElement(By.id("answer2")).getAttribute("style").contains("display: none"));
+    }
+
     @After
     public void tearDown() throws Exception {
         String verificationErrorString = verificationErrors.toString();
@@ -105,6 +115,21 @@ public class OrderFormTests {
         if (driver != null){
             driver.close();
             driver.quit();
+        }
+    }
+
+    private void goToStep2() {
+        driver.findElement(By.name("krok1-qty-required")).click();
+        driver.findElement(By.name("krok1-qty-required")).clear();
+        driver.findElement(By.name("krok1-qty-required")).sendKeys("2");
+        driver.findElement(By.name("krok1-info1")).click();
+        driver.findElement(By.name("krok1-info1")).clear();
+        driver.findElement(By.name("krok1-info1")).sendKeys("Example comment");
+        driver.findElement(By.cssSelector("[type='submit']")).click();
+        try {
+            assertEquals("2", driver.findElement(By.name("step")).getAttribute("value"));
+        } catch (Exception e) {
+            verificationErrors.append(e.getMessage());
         }
     }
 
