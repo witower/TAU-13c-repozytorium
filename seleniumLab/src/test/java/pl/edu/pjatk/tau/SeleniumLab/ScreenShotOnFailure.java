@@ -35,7 +35,7 @@ public class ScreenShotOnFailure implements MethodRule {
             public void captureScreenShot(String fileName) throws IOException {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
                 fileName += UUID.randomUUID().toString();
-                File targetFile = new File("./screenShotsOnFailure/" + fileName + ".png");
+                File targetFile = new File("./" + fileName + ".png");
                 FileUtils.copyFile(scrFile, targetFile);
             }
         };
