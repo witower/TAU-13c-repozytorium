@@ -2,7 +2,10 @@ package pl.edu.pjatk.tau.SeleniumLab;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
