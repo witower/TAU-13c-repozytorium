@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class OrderFormTests {
     private static WebDriver driver;
-    private  String baseUrl;
+    private  String baseUrl = "https://roberts.pl/index.php?l=en&p=_katalog&i=_neutron_plus";
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
     private static ChromeOptions options = new ChromeOptions();
@@ -19,24 +19,13 @@ public class OrderFormTests {
 
     @BeforeClass
     public static void setUpBc(){
-        // Solving "[SEVERE]: Timed out receiving message from renderer: 0.100" issue, thanks to:
-        //      https://stackoverflow.com/questions/48450594/selenium-timed-out-receiving-message-from-renderer/52340526
-        options.setPageLoadStrategy(PageLoadStrategy.NONE);
-        options.addArguments("start-maximized");
-        options.addArguments("enable-automation");
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-infobars");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-browser-side-navigation");
-        options.addArguments("--disable-gpu");
+        options.setPageLoadStrategy(PageLoadStrategy.EAGER); //NONE powoduje INFO: HTTP Status: '404' -> incorrect JSON status mapping for 'stale element reference' (400 expected)
         driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
     @Before
     public void setUp() throws Exception {
-        baseUrl = "https://roberts.pl/index.php?l=en&p=_katalog&i=_neutron_plus";
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.get(baseUrl);
         driver.findElement(By.name("SubmitNext")).click();
         try {
@@ -49,7 +38,6 @@ public class OrderFormTests {
 
     @Test
     public void successfulOrderTest() throws Exception {
-
         goToStep2();
 
         driver.findElement(By.xpath("(//input[@name='krok2-sposob_dostawy-required'])[3]")).click();
@@ -100,6 +88,45 @@ public class OrderFormTests {
         assertTrue(driver.findElement(By.id("answer2")).getAttribute("style").contains("display: block"));
         driver.findElement(By.cssSelector("[value='_formularz_zamowienia_sposob_dostawy_odbior_osobisty']")).click();
         assertTrue(driver.findElement(By.id("answer2")).getAttribute("style").contains("display: none"));
+    }
+
+    @Test
+    public void emailAddressVerificationTest() throws Exception {
+        goToStep2();
+
+        driver.findElement(By.name("krok2-email-required")).clear();
+        driver.findElement(By.name("krok2-emailv-required")).clear();
+        driver.findElement(By.name("SubmitNext")).click();
+        assertTrue(driver.findElement(By.xpath("(//input[@name='krok2-email-required'])/..")).getAttribute("class").contains("form_error"));
+
+        driver.findElement(By.name("krok2-email-required")).clear();
+        driver.findElement(By.name("krok2-email-required")).sendKeys("bezmałpy");
+        driver.findElement(By.name("SubmitNext")).click();
+        assertTrue(driver.findElement(By.xpath("(//input[@name='krok2-email-required'])/..")).getAttribute("class").contains("form_error"));
+
+        driver.findElement(By.name("krok2-email-required")).clear();
+        driver.findElement(By.name("krok2-email-required")).sendKeys("bezdomeny@");
+        driver.findElement(By.name("SubmitNext")).click();
+        assertTrue(driver.findElement(By.xpath("(//input[@name='krok2-email-required'])/..")).getAttribute("class").contains("form_error"));
+
+        driver.findElement(By.name("krok2-email-required")).clear();
+        driver.findElement(By.name("krok2-email-required")).sendKeys("bezdomenyTld@domena");
+        driver.findElement(By.name("SubmitNext")).click();
+        assertTrue(driver.findElement(By.xpath("(//input[@name='krok2-email-required'])/..")).getAttribute("class").contains("form_error"));
+
+        driver.findElement(By.name("krok2-email-required")).clear();
+        driver.findElement(By.name("krok2-email-required")).sendKeys("adres@poprawny.pl");
+        driver.findElement(By.name("SubmitNext")).click();
+        assertFalse(driver.findElement(By.xpath("(//input[@name='krok2-email-required'])/..")).getAttribute("class").contains("form_error"));
+
+        driver.findElement(By.name("krok2-emailv-required")).clear();
+        driver.findElement(By.name("SubmitNext")).click();
+        assertTrue(driver.findElement(By.xpath("(//input[@name='krok2-emailv-required'])/..")).getAttribute("class").contains("form_error"));
+
+        driver.findElement(By.name("krok2-emailv-required")).clear();
+        driver.findElement(By.name("krok2-emailv-required")).sendKeys("adres@poprawny.pl");
+        driver.findElement(By.name("SubmitNext")).click();
+        assertFalse(driver.findElement(By.xpath("(//input[@name='krok2-emailv-required'])/..")).getAttribute("class").contains("form_error"));
     }
 
     @After
