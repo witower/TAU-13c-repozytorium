@@ -12,11 +12,12 @@ ${DELAY}        0
 
 *** Keywords ***
 Open Browser To Product Page
-    Open Browser    ${START URL}    ${BROWSER}
+    Open Browser    about:blank    ${BROWSER}
     Set Selenium Speed    ${DELAY}
-    Title Should Be    Robert's Outdoor Equipment
 
-Submit To Inquiry Page
+Go To Inquiry Page
+    Go To   ${START URL}
+    Title Should Be    Robert's Outdoor Equipment
     Click Button    css:[type="submit"]
     Location Should Contain     p=_zamowienie&i=_neutron_plus
     Step Should Be   1
@@ -69,3 +70,11 @@ Click Continue Link
 Location Should Be Product Page
     Location Should Be  ${START URL}
 
+Delivery Address Should Be Hidden
+    Element Attribute Value Should Be   id:answer2   style     display: none;
+
+Pick Courier Service
+    Select Radio Button     krok2-sposob_dostawy-required       _formularz_zamowienia_sposob_dostawy_kurier
+
+Delivery Address Should Be Visible
+    Element Attribute Value Should Be   id:answer2   style     display: block;

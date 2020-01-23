@@ -6,7 +6,7 @@ Resource        resource.robot
 
 Suite Setup     Open Browser To Product Page
 Suite Teardown  Close Browser
-Test Setup      Submit To Inquiry Page
+Test Setup      Go To Inquiry Page
 
 #Test Template 	Run with arguments
 
@@ -31,3 +31,12 @@ Successfull Order
 
     Click Continue Link
     Location Should Be Product Page
+
+Delivery Address Show Hide
+    Go To Step2
+
+    Delivery Address Should Be Hidden
+    Pick Courier Service
+    Delivery Address Should Be Visible
+    Pick Personal Collection
+    Delivery Address Should Be Hidden
