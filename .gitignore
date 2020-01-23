@@ -10,6 +10,9 @@ buildNumber.properties
 */.idea/
 *.iml
 seleniumLab/screenShotsOnFailure/*
+robotframework/lab05again/*.html
+robotframework/lab05again/*.xml
+robotframework/lab05again/*.png
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
