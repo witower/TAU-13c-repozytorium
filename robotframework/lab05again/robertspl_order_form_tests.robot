@@ -40,3 +40,27 @@ Delivery Address Show Hide
     Delivery Address Should Be Visible
     Pick Personal Collection
     Delivery Address Should Be Hidden
+
+Email Address Verification
+    Go To Step2
+
+    Clear Email Fields
+    Click Next Submit
+    Email Field Should Have Error
+    Fill In Email Field     bezmałpy
+    Click Next Submit
+    Email Field Should Have Error
+    Fill In Email Field     bezdomeny@
+    Click Next Submit
+    Email Field Should Have Error
+    Fill In Email Field     bezdomenyTld@domena
+    Click Next Submit
+    Email Field Should Have Error
+    Fill In Email Field     adres@wzgledniepoprawny.pl
+    Click Next Submit
+    Email Field Should Not Have Error
+    Repeat Email Field Should Have Error
+    Fill In Repeat Email Field     adres@wzgledniepoprawny.pl
+    Click Next Submit
+    Email Field Should Not Have Error
+    Repeat Email Field Should Not Have Error

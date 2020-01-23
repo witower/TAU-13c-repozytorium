@@ -78,3 +78,31 @@ Pick Courier Service
 
 Delivery Address Should Be Visible
     Element Attribute Value Should Be   id:answer2   style     display: block;
+
+Clear Email Fields
+    Input Text  name:krok2-email-required   \
+    Input Text  name:krok2-emailv-required   \
+
+Fill In Email Field
+    [Arguments]     ${value}
+    Input Text  name:krok2-email-required   ${value}
+    
+Fill In Repeat Email Field
+    [Arguments]     ${value}
+    Input Text  name:krok2-emailv-required   ${value}
+    
+Field Should Have Error
+    [Arguments]     ${field}
+    Page Should Contain Element     xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]   Field error expected in ${field}
+
+Email Field Should Have Error
+    Field Should Have Error  krok2-email-required
+
+Repeat Email Field Should Have Error
+    Field Should Have Error  krok2-emailv-required
+
+Email Field Should Not Have Error
+    Run Keyword And Expect Error    STARTS: Field error expected in      Email Field Should Have Error
+
+Repeat Email Field Should Not Have Error
+    Run Keyword And Expect Error    STARTS: Field error expected in      Repeat Email Field Should Have Error
