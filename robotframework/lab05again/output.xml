@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200123 12:47:51.357" rpa="false">
+<suite id="s1" name="Robertspl Order Form Tests" source="C:\Users\wit\Workspace\PJATK\7-TAU\TAU-13c-repozytorium\robotframework\lab05again\robertspl_order_form_tests.robot">
+<kw name="Open Browser To Product Page" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200123 12:47:51.987" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200123 12:47:51.987" endtime="20200123 12:47:55.433"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200123 12:47:55.434" endtime="20200123 12:47:55.435"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:51.987" endtime="20200123 12:47:55.436"></status>
+</kw>
+<test id="s1-t1" name="Successfull Order">
+<kw name="Go To Inquiry Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START URL}</arg>
+</arguments>
+<msg timestamp="20200123 12:47:55.441" level="INFO">Opening url 'https://roberts.pl/index.php?l=en&amp;p=_katalog&amp;i=_neutron_plus'</msg>
+<status status="PASS" starttime="20200123 12:47:55.439" endtime="20200123 12:47:57.506"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Robert's Outdoor Equipment</arg>
+</arguments>
+<msg timestamp="20200123 12:47:57.570" level="INFO">Page title is 'Robert's Outdoor Equipment'.</msg>
+<status status="PASS" starttime="20200123 12:47:57.506" endtime="20200123 12:47:57.571"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"]</arg>
+</arguments>
+<msg timestamp="20200123 12:47:57.572" level="INFO">Clicking button 'css:[type="submit"]'.</msg>
+<status status="PASS" starttime="20200123 12:47:57.571" endtime="20200123 12:47:58.335"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>p=_zamowienie&amp;i=_neutron_plus</arg>
+</arguments>
+<msg timestamp="20200123 12:47:58.362" level="INFO">Current location contains 'p=_zamowienie&amp;i=_neutron_plus'.</msg>
+<status status="PASS" starttime="20200123 12:47:58.335" endtime="20200123 12:47:58.363"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:47:58.408" level="INFO">Element 'name:step' attribute 'value' contains value '1'.</msg>
+<status status="PASS" starttime="20200123 12:47:58.365" endtime="20200123 12:47:58.408"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:58.364" endtime="20200123 12:47:58.409"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:55.438" endtime="20200123 12:47:58.409"></status>
+</kw>
+<kw name="Fill In Valid Quantity" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok1-qty-required</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200123 12:47:58.414" level="INFO">Typing text '2' into text field 'name:krok1-qty-required'.</msg>
+<status status="PASS" starttime="20200123 12:47:58.413" endtime="20200123 12:47:58.611"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:58.411" endtime="20200123 12:47:58.612"></status>
+</kw>
+<kw name="Fill In Example Comment" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok1-info1</arg>
+<arg>Example comment</arg>
+</arguments>
+<msg timestamp="20200123 12:47:58.616" level="INFO">Typing text 'Example comment' into text field 'name:krok1-info1'.</msg>
+<status status="PASS" starttime="20200123 12:47:58.616" endtime="20200123 12:47:58.860"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:58.615" endtime="20200123 12:47:58.861"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:47:58.864" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:47:58.863" endtime="20200123 12:47:59.919"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:58.862" endtime="20200123 12:47:59.919"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:47:59.969" level="INFO">Element 'name:step' attribute 'value' contains value '2'.</msg>
+<status status="PASS" starttime="20200123 12:47:59.923" endtime="20200123 12:47:59.969"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:59.921" endtime="20200123 12:47:59.970"></status>
+</kw>
+<kw name="Pick Personal Collection" library="resource">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>krok2-sposob_dostawy-required</arg>
+<arg>_formularz_zamowienia_sposob_dostawy_odbior_osobisty</arg>
+</arguments>
+<msg timestamp="20200123 12:47:59.972" level="INFO">Selecting '_formularz_zamowienia_sposob_dostawy_odbior_osobisty' from radio button 'krok2-sposob_dostawy-required'.</msg>
+<status status="PASS" starttime="20200123 12:47:59.971" endtime="20200123 12:48:00.150"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:59.971" endtime="20200123 12:48:00.151"></status>
+</kw>
+<kw name="Pick Valid Delivery Date" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:datepicker</arg>
+</arguments>
+<msg timestamp="20200123 12:48:00.153" level="INFO">Clicking element 'id:datepicker'.</msg>
+<status status="PASS" starttime="20200123 12:48:00.153" endtime="20200123 12:48:00.368"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:.ui-datepicker-calendar [data-handler="selectDay"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:00.368" level="INFO">Clicking element 'css:.ui-datepicker-calendar [data-handler="selectDay"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:00.368" endtime="20200123 12:48:00.537"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:00.152" endtime="20200123 12:48:00.537"></status>
+</kw>
+<kw name="Pick To Pay In Cash" library="resource">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>krok2-rodzaj_platnosci-required</arg>
+<arg>_formularz_zamowienia_rodzaj_platnosci_przy_odbiorze</arg>
+</arguments>
+<msg timestamp="20200123 12:48:00.542" level="INFO">Selecting '_formularz_zamowienia_rodzaj_platnosci_przy_odbiorze' from radio button 'krok2-rodzaj_platnosci-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:00.541" endtime="20200123 12:48:00.774"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:00.539" endtime="20200123 12:48:00.775"></status>
+</kw>
+<kw name="Pick No Invoice" library="resource">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>krok2-dokument_zakupu-required</arg>
+<arg>_formularz_zamowienia_dokument_zakupu_paragon</arg>
+</arguments>
+<msg timestamp="20200123 12:48:00.776" level="INFO">Selecting '_formularz_zamowienia_dokument_zakupu_paragon' from radio button 'krok2-dokument_zakupu-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:00.776" endtime="20200123 12:48:00.925"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:00.775" endtime="20200123 12:48:00.925"></status>
+</kw>
+<kw name="Fill In Customer Valid Data" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-imie-required</arg>
+<arg>Johnny</arg>
+</arguments>
+<msg timestamp="20200123 12:48:00.929" level="INFO">Typing text 'Johnny' into text field 'name:krok2-imie-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:00.928" endtime="20200123 12:48:01.192"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-nazwisko-required</arg>
+<arg>Test</arg>
+</arguments>
+<msg timestamp="20200123 12:48:01.194" level="INFO">Typing text 'Test' into text field 'name:krok2-nazwisko-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:01.193" endtime="20200123 12:48:01.473"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-email-required</arg>
+<arg>johnny@test.com</arg>
+</arguments>
+<msg timestamp="20200123 12:48:01.474" level="INFO">Typing text 'johnny@test.com' into text field 'name:krok2-email-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:01.474" endtime="20200123 12:48:01.824"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-emailv-required</arg>
+<arg>johnny@test.com</arg>
+</arguments>
+<msg timestamp="20200123 12:48:01.825" level="INFO">Typing text 'johnny@test.com' into text field 'name:krok2-emailv-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:01.824" endtime="20200123 12:48:02.157"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-telefon-required</arg>
+<arg>123456789</arg>
+</arguments>
+<msg timestamp="20200123 12:48:02.158" level="INFO">Typing text '123456789' into text field 'name:krok2-telefon-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:02.157" endtime="20200123 12:48:02.450"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:00.927" endtime="20200123 12:48:02.450"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:02.453" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:02.453" endtime="20200123 12:48:03.251"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:02.452" endtime="20200123 12:48:03.252"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>3</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:03.299" level="INFO">Element 'name:step' attribute 'value' contains value '3'.</msg>
+<status status="PASS" starttime="20200123 12:48:03.255" endtime="20200123 12:48:03.299"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:03.254" endtime="20200123 12:48:03.300"></status>
+</kw>
+<kw name="Accept Terms" library="resource">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="checkbox"][name="akceptuje_regulamin-required"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:03.301" level="INFO">Selecting checkbox 'css:[type="checkbox"][name="akceptuje_regulamin-required"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:03.301" endtime="20200123 12:48:03.485"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:03.301" endtime="20200123 12:48:03.486"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:03.490" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:03.490" endtime="20200123 12:48:45.907"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:03.489" endtime="20200123 12:48:45.908"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>4</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:45.969" level="INFO">Element 'name:step' attribute 'value' contains value '4'.</msg>
+<status status="PASS" starttime="20200123 12:48:45.921" endtime="20200123 12:48:45.969"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:45.919" endtime="20200123 12:48:45.970"></status>
+</kw>
+<kw name="Click Continue Link" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>link:Click here to go back to the page before starting inquiry.</arg>
+</arguments>
+<msg timestamp="20200123 12:48:45.971" level="INFO">Clicking element 'link:Click here to go back to the page before starting inquiry.'.</msg>
+<status status="PASS" starttime="20200123 12:48:45.971" endtime="20200123 12:48:46.884"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:45.970" endtime="20200123 12:48:46.885"></status>
+</kw>
+<kw name="Location Should Be Product Page" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${START URL}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:46.910" level="INFO">Current location is 'https://roberts.pl/index.php?l=en&amp;p=_katalog&amp;i=_neutron_plus'.</msg>
+<status status="PASS" starttime="20200123 12:48:46.888" endtime="20200123 12:48:46.910"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:46.886" endtime="20200123 12:48:46.912"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:47:55.436" endtime="20200123 12:48:46.916" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Delivery Address Show Hide">
+<kw name="Go To Inquiry Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START URL}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:46.925" level="INFO">Opening url 'https://roberts.pl/index.php?l=en&amp;p=_katalog&amp;i=_neutron_plus'</msg>
+<status status="PASS" starttime="20200123 12:48:46.924" endtime="20200123 12:48:47.563"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Robert's Outdoor Equipment</arg>
+</arguments>
+<msg timestamp="20200123 12:48:47.577" level="INFO">Page title is 'Robert's Outdoor Equipment'.</msg>
+<status status="PASS" starttime="20200123 12:48:47.564" endtime="20200123 12:48:47.577"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:47.577" level="INFO">Clicking button 'css:[type="submit"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:47.577" endtime="20200123 12:48:48.309"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>p=_zamowienie&amp;i=_neutron_plus</arg>
+</arguments>
+<msg timestamp="20200123 12:48:48.334" level="INFO">Current location contains 'p=_zamowienie&amp;i=_neutron_plus'.</msg>
+<status status="PASS" starttime="20200123 12:48:48.310" endtime="20200123 12:48:48.335"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:48.371" level="INFO">Element 'name:step' attribute 'value' contains value '1'.</msg>
+<status status="PASS" starttime="20200123 12:48:48.337" endtime="20200123 12:48:48.371"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:48.335" endtime="20200123 12:48:48.371"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:46.923" endtime="20200123 12:48:48.372"></status>
+</kw>
+<kw name="Go To Step2" library="resource">
+<kw name="Fill In Valid Quantity" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok1-qty-required</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200123 12:48:48.374" level="INFO">Typing text '2' into text field 'name:krok1-qty-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:48.374" endtime="20200123 12:48:48.659"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:48.373" endtime="20200123 12:48:48.659"></status>
+</kw>
+<kw name="Fill In Example Comment" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok1-info1</arg>
+<arg>Example comment</arg>
+</arguments>
+<msg timestamp="20200123 12:48:48.661" level="INFO">Typing text 'Example comment' into text field 'name:krok1-info1'.</msg>
+<status status="PASS" starttime="20200123 12:48:48.661" endtime="20200123 12:48:48.938"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:48.660" endtime="20200123 12:48:48.938"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:48.939" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:48.939" endtime="20200123 12:48:49.730"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:48.938" endtime="20200123 12:48:49.730"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:49.774" level="INFO">Element 'name:step' attribute 'value' contains value '2'.</msg>
+<status status="PASS" starttime="20200123 12:48:49.732" endtime="20200123 12:48:49.774"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:49.731" endtime="20200123 12:48:49.774"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:48.372" endtime="20200123 12:48:49.774"></status>
+</kw>
+<kw name="Delivery Address Should Be Hidden" library="resource">
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>id:answer2</arg>
+<arg>style</arg>
+<arg>display: none;</arg>
+</arguments>
+<msg timestamp="20200123 12:48:49.820" level="INFO">Element 'id:answer2' attribute 'style' contains value 'display: none;'.</msg>
+<status status="PASS" starttime="20200123 12:48:49.776" endtime="20200123 12:48:49.821"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:49.775" endtime="20200123 12:48:49.821"></status>
+</kw>
+<kw name="Pick Courier Service" library="resource">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>krok2-sposob_dostawy-required</arg>
+<arg>_formularz_zamowienia_sposob_dostawy_kurier</arg>
+</arguments>
+<msg timestamp="20200123 12:48:49.823" level="INFO">Selecting '_formularz_zamowienia_sposob_dostawy_kurier' from radio button 'krok2-sposob_dostawy-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:49.823" endtime="20200123 12:48:49.987"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:49.822" endtime="20200123 12:48:49.987"></status>
+</kw>
+<kw name="Delivery Address Should Be Visible" library="resource">
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>id:answer2</arg>
+<arg>style</arg>
+<arg>display: block;</arg>
+</arguments>
+<msg timestamp="20200123 12:48:50.026" level="INFO">Element 'id:answer2' attribute 'style' contains value 'display: block;'.</msg>
+<status status="PASS" starttime="20200123 12:48:49.990" endtime="20200123 12:48:50.026"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:49.989" endtime="20200123 12:48:50.027"></status>
+</kw>
+<kw name="Pick Personal Collection" library="resource">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>krok2-sposob_dostawy-required</arg>
+<arg>_formularz_zamowienia_sposob_dostawy_odbior_osobisty</arg>
+</arguments>
+<msg timestamp="20200123 12:48:50.030" level="INFO">Selecting '_formularz_zamowienia_sposob_dostawy_odbior_osobisty' from radio button 'krok2-sposob_dostawy-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:50.029" endtime="20200123 12:48:50.162"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:50.028" endtime="20200123 12:48:50.163"></status>
+</kw>
+<kw name="Delivery Address Should Be Hidden" library="resource">
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>id:answer2</arg>
+<arg>style</arg>
+<arg>display: none;</arg>
+</arguments>
+<msg timestamp="20200123 12:48:50.194" level="INFO">Element 'id:answer2' attribute 'style' contains value 'display: none;'.</msg>
+<status status="PASS" starttime="20200123 12:48:50.166" endtime="20200123 12:48:50.194"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:50.165" endtime="20200123 12:48:50.195"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:46.922" endtime="20200123 12:48:50.196" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Email Address Verification">
+<kw name="Go To Inquiry Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START URL}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:50.202" level="INFO">Opening url 'https://roberts.pl/index.php?l=en&amp;p=_katalog&amp;i=_neutron_plus'</msg>
+<status status="PASS" starttime="20200123 12:48:50.201" endtime="20200123 12:48:50.998"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Robert's Outdoor Equipment</arg>
+</arguments>
+<msg timestamp="20200123 12:48:51.009" level="INFO">Page title is 'Robert's Outdoor Equipment'.</msg>
+<status status="PASS" starttime="20200123 12:48:50.999" endtime="20200123 12:48:51.010"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:51.010" level="INFO">Clicking button 'css:[type="submit"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:51.010" endtime="20200123 12:48:52.239"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>p=_zamowienie&amp;i=_neutron_plus</arg>
+</arguments>
+<msg timestamp="20200123 12:48:52.256" level="INFO">Current location contains 'p=_zamowienie&amp;i=_neutron_plus'.</msg>
+<status status="PASS" starttime="20200123 12:48:52.240" endtime="20200123 12:48:52.257"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:52.302" level="INFO">Element 'name:step' attribute 'value' contains value '1'.</msg>
+<status status="PASS" starttime="20200123 12:48:52.258" endtime="20200123 12:48:52.302"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:52.257" endtime="20200123 12:48:52.302"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:50.201" endtime="20200123 12:48:52.302"></status>
+</kw>
+<kw name="Go To Step2" library="resource">
+<kw name="Fill In Valid Quantity" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok1-qty-required</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200123 12:48:52.307" level="INFO">Typing text '2' into text field 'name:krok1-qty-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:52.306" endtime="20200123 12:48:52.504"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:52.305" endtime="20200123 12:48:52.504"></status>
+</kw>
+<kw name="Fill In Example Comment" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok1-info1</arg>
+<arg>Example comment</arg>
+</arguments>
+<msg timestamp="20200123 12:48:52.506" level="INFO">Typing text 'Example comment' into text field 'name:krok1-info1'.</msg>
+<status status="PASS" starttime="20200123 12:48:52.505" endtime="20200123 12:48:52.738"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:52.505" endtime="20200123 12:48:52.738"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:52.739" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:52.739" endtime="20200123 12:48:53.626"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:52.738" endtime="20200123 12:48:53.627"></status>
+</kw>
+<kw name="Step Should Be" library="resource">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>name:step</arg>
+<arg>value</arg>
+<arg>${expected}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:53.693" level="INFO">Element 'name:step' attribute 'value' contains value '2'.</msg>
+<status status="PASS" starttime="20200123 12:48:53.630" endtime="20200123 12:48:53.693"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:53.628" endtime="20200123 12:48:53.694"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:52.304" endtime="20200123 12:48:53.694"></status>
+</kw>
+<kw name="Clear Email Fields" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-email-required</arg>
+</arguments>
+<msg timestamp="20200123 12:48:53.697" level="INFO">Typing text '' into text field 'name:krok2-email-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:53.696" endtime="20200123 12:48:53.884"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-emailv-required</arg>
+</arguments>
+<msg timestamp="20200123 12:48:53.885" level="INFO">Typing text '' into text field 'name:krok2-emailv-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:53.885" endtime="20200123 12:48:54.044"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:53.695" endtime="20200123 12:48:54.044"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:54.048" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:54.047" endtime="20200123 12:48:54.859"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:54.046" endtime="20200123 12:48:54.860"></status>
+</kw>
+<kw name="Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-email-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:54.905" level="INFO">Current page contains element 'xpath://input[@name='krok2-email-required']/parent::*[contains(@class, 'form_error')]'.</msg>
+<status status="PASS" starttime="20200123 12:48:54.866" endtime="20200123 12:48:54.906"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:54.865" endtime="20200123 12:48:54.906"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:54.863" endtime="20200123 12:48:54.907"></status>
+</kw>
+<kw name="Fill In Email Field" library="resource">
+<arguments>
+<arg>bezmałpy</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-email-required</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:54.910" level="INFO">Typing text 'bezmałpy' into text field 'name:krok2-email-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:54.909" endtime="20200123 12:48:55.236"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:54.908" endtime="20200123 12:48:55.237"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:55.239" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:55.238" endtime="20200123 12:48:56.028"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:55.238" endtime="20200123 12:48:56.030"></status>
+</kw>
+<kw name="Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-email-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:56.094" level="INFO">Current page contains element 'xpath://input[@name='krok2-email-required']/parent::*[contains(@class, 'form_error')]'.</msg>
+<status status="PASS" starttime="20200123 12:48:56.041" endtime="20200123 12:48:56.094"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:56.040" endtime="20200123 12:48:56.094"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:56.038" endtime="20200123 12:48:56.094"></status>
+</kw>
+<kw name="Fill In Email Field" library="resource">
+<arguments>
+<arg>bezdomeny@</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-email-required</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:56.098" level="INFO">Typing text 'bezdomeny@' into text field 'name:krok2-email-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:56.097" endtime="20200123 12:48:56.491"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:56.096" endtime="20200123 12:48:56.491"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:56.494" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:56.493" endtime="20200123 12:48:57.165"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:56.492" endtime="20200123 12:48:57.165"></status>
+</kw>
+<kw name="Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-email-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:57.259" level="INFO">Current page contains element 'xpath://input[@name='krok2-email-required']/parent::*[contains(@class, 'form_error')]'.</msg>
+<status status="PASS" starttime="20200123 12:48:57.170" endtime="20200123 12:48:57.259"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:57.169" endtime="20200123 12:48:57.259"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:57.168" endtime="20200123 12:48:57.260"></status>
+</kw>
+<kw name="Fill In Email Field" library="resource">
+<arguments>
+<arg>bezdomenyTld@domena</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-email-required</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:57.264" level="INFO">Typing text 'bezdomenyTld@domena' into text field 'name:krok2-email-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:57.263" endtime="20200123 12:48:57.688"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:57.261" endtime="20200123 12:48:57.689"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:57.691" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:57.690" endtime="20200123 12:48:58.405"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:57.690" endtime="20200123 12:48:58.405"></status>
+</kw>
+<kw name="Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-email-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:58.446" level="INFO">Current page contains element 'xpath://input[@name='krok2-email-required']/parent::*[contains(@class, 'form_error')]'.</msg>
+<status status="PASS" starttime="20200123 12:48:58.409" endtime="20200123 12:48:58.447"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:58.408" endtime="20200123 12:48:58.447"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:58.407" endtime="20200123 12:48:58.448"></status>
+</kw>
+<kw name="Fill In Email Field" library="resource">
+<arguments>
+<arg>adres@wzgledniepoprawny.pl</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-email-required</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200123 12:48:58.468" level="INFO">Typing text 'adres@wzgledniepoprawny.pl' into text field 'name:krok2-email-required'.</msg>
+<status status="PASS" starttime="20200123 12:48:58.467" endtime="20200123 12:48:58.948"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:58.466" endtime="20200123 12:48:58.948"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:48:58.951" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:48:58.950" endtime="20200123 12:48:59.684"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:58.949" endtime="20200123 12:48:59.685"></status>
+</kw>
+<kw name="Email Field Should Not Have Error" library="resource">
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>STARTS: Field error expected in</arg>
+<arg>Email Field Should Have Error</arg>
+</arguments>
+<kw name="Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-email-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200123 12:49:00.213" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200123 12:48:59.764" endtime="20200123 12:49:00.213"></status>
+</kw>
+<msg timestamp="20200123 12:49:00.217" level="FAIL">Field error expected in krok2-email-required</msg>
+<status status="FAIL" starttime="20200123 12:48:59.689" endtime="20200123 12:49:00.218"></status>
+</kw>
+<status status="FAIL" starttime="20200123 12:48:59.689" endtime="20200123 12:49:00.218"></status>
+</kw>
+<status status="FAIL" starttime="20200123 12:48:59.688" endtime="20200123 12:49:00.218"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:59.688" endtime="20200123 12:49:00.218"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:59.686" endtime="20200123 12:49:00.219"></status>
+</kw>
+<kw name="Repeat Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-emailv-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<msg timestamp="20200123 12:49:00.256" level="INFO">Current page contains element 'xpath://input[@name='krok2-emailv-required']/parent::*[contains(@class, 'form_error')]'.</msg>
+<status status="PASS" starttime="20200123 12:49:00.222" endtime="20200123 12:49:00.257"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:00.221" endtime="20200123 12:49:00.257"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:00.220" endtime="20200123 12:49:00.257"></status>
+</kw>
+<kw name="Fill In Repeat Email Field" library="resource">
+<arguments>
+<arg>adres@wzgledniepoprawny.pl</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:krok2-emailv-required</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200123 12:49:00.260" level="INFO">Typing text 'adres@wzgledniepoprawny.pl' into text field 'name:krok2-emailv-required'.</msg>
+<status status="PASS" starttime="20200123 12:49:00.259" endtime="20200123 12:49:01.000"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:00.258" endtime="20200123 12:49:01.000"></status>
+</kw>
+<kw name="Click Next Submit" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[type="submit"][name="SubmitNext"]</arg>
+</arguments>
+<msg timestamp="20200123 12:49:01.003" level="INFO">Clicking element 'css:[type="submit"][name="SubmitNext"]'.</msg>
+<status status="PASS" starttime="20200123 12:49:01.002" endtime="20200123 12:49:01.846"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:01.001" endtime="20200123 12:49:01.848"></status>
+</kw>
+<kw name="Email Field Should Not Have Error" library="resource">
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>STARTS: Field error expected in</arg>
+<arg>Email Field Should Have Error</arg>
+</arguments>
+<kw name="Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-email-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200123 12:49:02.353" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200123 12:49:01.945" endtime="20200123 12:49:02.353"></status>
+</kw>
+<msg timestamp="20200123 12:49:02.354" level="FAIL">Field error expected in krok2-email-required</msg>
+<status status="FAIL" starttime="20200123 12:49:01.860" endtime="20200123 12:49:02.355"></status>
+</kw>
+<status status="FAIL" starttime="20200123 12:49:01.858" endtime="20200123 12:49:02.355"></status>
+</kw>
+<status status="FAIL" starttime="20200123 12:49:01.856" endtime="20200123 12:49:02.355"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:01.855" endtime="20200123 12:49:02.355"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:01.853" endtime="20200123 12:49:02.356"></status>
+</kw>
+<kw name="Repeat Email Field Should Not Have Error" library="resource">
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>STARTS: Field error expected in</arg>
+<arg>Repeat Email Field Should Have Error</arg>
+</arguments>
+<kw name="Repeat Email Field Should Have Error" library="resource">
+<kw name="Field Should Have Error" library="resource">
+<arguments>
+<arg>krok2-emailv-required</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://input[@name='${field}']/parent::*[contains(@class, 'form_error')]</arg>
+<arg>Field error expected in ${field}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200123 12:49:02.755" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200123 12:49:02.390" endtime="20200123 12:49:02.755"></status>
+</kw>
+<msg timestamp="20200123 12:49:02.755" level="FAIL">Field error expected in krok2-emailv-required</msg>
+<status status="FAIL" starttime="20200123 12:49:02.359" endtime="20200123 12:49:02.755"></status>
+</kw>
+<status status="FAIL" starttime="20200123 12:49:02.358" endtime="20200123 12:49:02.755"></status>
+</kw>
+<status status="FAIL" starttime="20200123 12:49:02.358" endtime="20200123 12:49:02.755"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:02.357" endtime="20200123 12:49:02.755"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:49:02.357" endtime="20200123 12:49:02.755"></status>
+</kw>
+<status status="PASS" starttime="20200123 12:48:50.199" endtime="20200123 12:49:02.755" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200123 12:49:02.771" endtime="20200123 12:49:05.076"></status>
+</kw>
+<doc>Tests of robetrs.pl order/inquiry form.</doc>
+<status status="PASS" starttime="20200123 12:47:51.357" endtime="20200123 12:49:05.076"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Robertspl Order Form Tests">Robertspl Order Form Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
