@@ -15,7 +15,7 @@
     <description>s16125, project for lab04, learning jmeter</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>12</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
