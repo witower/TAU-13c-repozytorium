@@ -1,0 +1,7 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1580021277504,18,ProductListTest,200,,Product Test Thread Group 1-1,text,true,,174,156,1,1,http://localhost:8080/products,18,0,5
+1580021277524,10,ProductGetTest,404,,Product Test Thread Group 1-1,,false,,121,158,1,1,http://localhost:8080/products/1,10,0,0
+1580021277535,15,ProductPutTest,404,,Product Test Thread Group 1-1,,false,,121,265,1,1,http://localhost:8080/products/1,15,0,0
+1580021277551,10,ProductDeleteTest,404,,Product Test Thread Group 1-1,,false,,121,180,1,1,http://localhost:8080/products/2,10,0,0
+1580021277563,11,ProductCreateTest,201,,Product Test Thread Group 1-1,text,true,,263,269,1,1,http://localhost:8080/products,10,0,0
+1580021277586,1206,JDBC Request - clean,200,OK,tearDown Thread Group 1-1,text,true,,9,0,1,1,null,1206,0,1205
